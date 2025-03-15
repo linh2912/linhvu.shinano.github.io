@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animations.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Linh Vu_Shinano</a>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Home -->
+        <section class="home section" id="home">
+            <div class="container">
+                <div class="home-content">
+                    <div class="home-data">
+                        <h1 class="home-title">Hi, I'm <span>Linh Vu_Shinano</span></h1>
+                        <h3 class="home-subtitle">Web Developer</h3>
+                        <p class="home-description">
+                            Passionate about creating beautiful and functional websites with modern technologies.
+                        </p>
+                        <div class="home-buttons">
+                            <a href="#contact" class="button">Contact Me</a>
+                            <a href="#" class="button button-ghost">Download CV</a>
+                        </div>
+                    </div>
+                    <div class="home-social">
+                        <a href="https://github.com/linh2912" class="home-social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.facebook.com/shinano.linhvu" class="home-social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="https://zalo.me/0908487040" class="home-social-link"><i class="fa-solid fa-comment"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-data">
+                        <p class="about-description">
+                            I am a passionate web developer with experience in creating responsive and user-friendly websites. My goal is to build applications that make a positive impact on people's lives.
+                        </p>
+                        <!--<div class="about-info">
+                            <div class="info-item">
+                                <h4>2Y+</h4>
+                                <p>learning <br>process</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>10+</h4>
+                                <p>practice <br>projects</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>10+</h4>
+                                <p>Happy<br>clients</p>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-content">
+                    <div class="skills-group">
+                        <div class="skills-item">
+                            <i class="fab fa-html5"></i>
+                            <h3>HTML</h3>
+                        </div>
+                        <div class="skills-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <h3>CSS</h3>
+                        </div>
+                        <div class="skills-item">
+                            <i class="fab fa-js"></i>
+                            <h3>JavaScript</h3>
+                        </div>
+                        <div class="skills-item">
+                            <i class="fab fa-react"></i>
+                            <h3>React</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>vuduylinh29122000@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+84 908 487 040</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>Nghia Thanh Commune, Chau Duc District, Ba Ria - Vung Tau Province.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contact-form" action="https://formsubmit.co/vuduylinh29122000@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="New Message from Portfolio Website">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="thanks.html">
+                        <input type="hidden" name="_autoresponse" value="Thank you for your message! I will get back to you as soon as possible.">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="button">
+                            <span class="button-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
