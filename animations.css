@@ -180,12 +180,22 @@
 
 .form-group input,
 .form-group textarea {
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: var(--background-alt);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    border-color: var(--primary-color);
+    background: var(--background-color);
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    background: var(--background-color);
 }
 
 
@@ -215,11 +225,12 @@
 /* Social Links Animation */
 
 .home-social-link {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .home-social-link:hover {
     transform: translateY(-5px);
+    color: var(--primary-color);
 }
 
 
@@ -359,13 +370,6 @@
 }
 
 .contact-form button {
-    transition-delay: 0.4s;
-}
-
-
-/* Enhanced Form Animations */
-
-.contact-form button {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -451,4 +455,95 @@
 .contact-form.success button i {
     transform: translateX(0);
     opacity: 1;
+}
+
+
+/* Zalo Icon Animation */
+
+.zalo-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zalo-icon {
+    width: 1.25em;
+    height: 1.25em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.zalo-link:hover .zalo-icon {
+    transform: scale(1.2) rotate(360deg);
+    color: var(--primary-color);
+}
+
+.zalo-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(74, 144, 226, 0.1);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.zalo-link:hover::before {
+    transform: scale(1.5);
+}
+
+@keyframes pulseZalo {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+    }
+}
+
+.zalo-link {
+    animation: pulseZalo 2s infinite;
+}
+
+
+/* Role Tags Animation */
+
+.role-tag {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.role-tag:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.role-tag:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.role-tag:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.role-tag i {
+    transition: transform 0.3s ease;
+}
+
+.role-tag:hover i {
+    transform: rotate(360deg);
 }
